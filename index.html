@@ -1,26 +1,70 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="en-US">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Prrrrrr select</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon"
+        type="image/png"
+        href="hacker-cat.png">
+  <link rel="apple-touch-icon" href="hacker-cat.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
-  <!-- Place favicon.ico in the root directory -->
-  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">   <!-- Place favicon.ico in the root directory -->
   <link rel="stylesheet" href="css/main.css">
   <meta name="theme-color" content="#fafafa">
 </head>
-
 <body>
 <header>
-  <h1>Select like a samurai 🥋</h1>
+  <img src="hacker-cat.png" height="60px" alt="">
 </header>
+<aside>
+  <h2>Cheat here</h2>
+  <div class="cheat-items">
+    <label>Beginning of word</label>
+    <span class="key-combo">
+      <kbd>control</kbd> + <kbd>shift</kbd> + <kbd>⭠</kbd>
+    </span>
+    <label>End of word</label>
+    <span class="key-combo">
+      <kbd>control</kbd> + <kbd>shift</kbd> + <kbd>⭢</kbd>
+    </span>
+    <label>Beginning of line</label>
+    <span class="key-combo">
+      <kbd>home</kbd>
+    </span>
+    <label>End of line</label>
+    <span class="key-combo">
+      <kbd>end</kbd>
+    </span>
+    <label>Select line before cursor</label>
+    <span class="key-combo" >
+      <kbd>shift</kbd> + <kbd>home</kbd>
+    </span>
+    <label>Select line after cursor</label>
+    <span class="key-combo">
+      <kbd>shift</kbd> + <kbd>end</kbd>
+    </span>
+    <label>Select previous line</label>
+    <span class="key-combo" >
+      <kbd>shift</kbd> + <kbd>⭡</kbd>
+    </span>
+    <label>Select next line</label>
+    <span class="key-combo">
+      <kbd>shift</kbd> + <kbd>⭣</kbd>
+    </span>
+    <label>Select page over cursor</label>
+    <span class="key-combo" >
+      <kbd>shift</kbd> + <kbd>page up</kbd>
+    </span>
+    <label>Select page under cursor</label>
+    <span class="key-combo">
+      <kbd>shift</kbd> + <kbd>page down</kbd>
+    </span>
+  </div>
+</aside>
 <main>
-  <h2>Selection area</h2>
+  <h2>Practice here (f)</h2>
   <section id="editor" contenteditable="true">
     <p>
       Sniff sniff. Cough hairball on conveniently placed pants reward the chosen human with a slow blink yet poop in
@@ -50,60 +94,6 @@
     </p>
   </section>
 </main>
-<aside>
-  <h2>Cheatsheet</h2>
-  <div class="cheat-items">
-    <label>Go to selecion editor</label>
-    <span class="key-combo">
-      <kbd>f</kbd>
-    </span>
-    <label>Beginning of line</label>
-    <span class="key-combo">
-      <kbd>home</kbd>
-    </span>
-    <label>End of line</label>
-    <span class="key-combo">
-      <kbd>end</kbd>
-    </span>
-    <label>Select line before cursor</label>
-    <span class="key-combo" >
-      <kbd>shift</kbd> + <kbd>home</kbd>
-    </span>
-    <label>Select line after cursor</label>
-    <span class="key-combo">
-      <kbd>shift</kbd> + <kbd>end</kbd>
-    </span>
-    <label>Select previous line</label>
-    <span class="key-combo" >
-      <kbd>shift</kbd> + <kbd>↑</kbd>
-    </span>
-    <label>Select next line</label>
-    <span class="key-combo">
-      <kbd>shift</kbd> + <kbd>↓</kbd>
-    </span>
-    <label>Select page over cursor</label>
-    <span class="key-combo" >
-      <kbd>shift</kbd> + <kbd>page up</kbd>
-    </span>
-    <label>Select page under cursor</label>
-    <span class="key-combo">
-      <kbd>shift</kbd> + <kbd>page down</kbd>
-    </span>
-  </div>
-</aside>
 </body>
 </html>
-<script>
-
-  const editor = document.querySelector("#editor")
-  function focusEditor(event) {
-    if (!editor || editor === document.activeElement) {
-      return;
-    }
-    if (event.key.toLowerCase() === "f") {
-      editor.focus();
-    }
-  }
-  document.addEventListener("keyup", focusEditor)
-
-</script>
+<script src="js/app.js"></script>

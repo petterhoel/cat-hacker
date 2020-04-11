@@ -1,85 +1,109 @@
 :root {
-  --dark: #022c43;
+  --dark: #202124;
+  --semi-dark: #3c4042;
   --light: whitesmoke;
-  --blue: #0c3c78;
-  --purple: #c495fd;
-  --pink: #f30a49;
-  --green: #1dddcb;
-  --yellow: #f6ff5a;
+  --pink: #ea80fc;
+  --orange: #ffaa3e;
+  --yellow: #fbe956;
+  --aside-light: #ededed;
+  --body-light: #e3e1e1;
 }
 
-
-html *,
+html,
 select,
 option,
-input {
+input,
+button,
+optgroup,
+textarea{
   font-family: 'Inter', sans-serif;
   caret-color: var(--light);
+  font-size: 1em;
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+@media screen and (prefers-color-scheme: light) {
+  /*TODO*/
 }
 
 html {
   background: var(--dark);
   color: var(--light);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-kbd {
-  font-family: 'Space Mono', monospace;
-  background-color: var(--blue);
-  border-radius: 3px;
-  border: 1px solid var(--purple);
-  color: var(--purple);
-  display: inline-block;
-  font-size: .85em;
-  font-weight: 700;
-  line-height: 1;
-  padding: 2px 4px;
-  white-space: nowrap;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  padding: 0 1em;
+  background: var(--semi-dark);
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
   display: grid;
-  grid-gap: 1em;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr;
   grid-template-rows: 80px 1fr;
   grid-template-areas:
     "header header"
-    "main cheetsheet";
+    "cheetsheet practice-area";
+}
+
+h1 {
+  margin: 0;
+}
+
+h2, h3, h4, h5, h6 {
+  margin: 0 0 16px;
 }
 
 body > header {
   grid-area: header;
   display: flex;
   place-items: center;
-  place-content: center;
 }
+
 body > main {
-  grid-area: main;
+  grid-area: practice-area;
 }
+
 body > aside {
   grid-area: cheetsheet;
 }
 
+aside, header {
+  background: var(--dark);
+}
+
+header {
+  background: #121212;
+  padding-left: 2.4em;
+}
+
+main,aside {
+  padding: 2.4em 3em;
+}
+
 p {
-  margin: 0 0 1em;
+  margin: 0 0 1.4em;
 }
 p:last-child {
   margin-bottom: 0;
 }
 
 #editor {
-  padding: 1em;
-  line-height: 1.4;
+  line-height: 1.4em;
   font-weight: lighter;
+  columns: 15em;
+  column-gap: 2em;
+  padding-top: 1em;
+}
+
+#editor:focus {
+  margin: -1em;
+  margin-top: 1em;
+  padding: 1em;
 }
 
 :focus {
-  outline: var(--green) dashed 1px;
+  outline: var(--orange) dashed 1px;
 }
 
 ::selection{
@@ -87,10 +111,25 @@ p:last-child {
   color: var(--dark);
 }
 
+
+
 .cheat-items {
+  margin-top: 2.4rem;
+  font-size: .8em;
+  font-weight: lighter;
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-gap: .6em;
+  grid-gap: .7em 1em;
+}
+
+kbd {
+  font-family: 'Source Code Pro', monospace;
+  border-radius: 3px;
+  border: 1px solid var(--pink);
+  color: var(--pink);
+  display: inline-block;
+  padding: 2px 4px;
+  white-space: nowrap;
 }
 
 
