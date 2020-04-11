@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<header>
+  <h1>Select like a samurai 🥋</h1>
+</header>
+<main>
+  <h2>Selection area</h2>
+  <section id="editor" contenteditable="true">
+    <p>
+      Sniff sniff. Cough hairball on conveniently placed pants reward the chosen human with a slow blink yet poop in
+      litter box, scratch the walls. Human give me attention meow. Attack the child bird bird bird bird bird bird human
+      why take bird out i could have eaten that, kick up litter so paw at beetle and eat it before it gets away. Murder
+      hooman toes spend all night ensuring people don't sleep sleep all day i cry and cry and cry unless you pet me, and
+      then maybe i cry just for fun scoot butt on the rug and cough furball and stare at ceiling light. The cat was
+      chasing the mouse intently stare at the same spot. Head nudges nap all day lick left leg for ninety minutes, still
+      dirty push your water glass on the floor, or bite nose of your human chase red laser dot. Lick yarn hanging out of
+      own butt cough furball into food bowl then scratch owner for a new one, mark territory sit on the laptop but going
+      to catch the red dot today going to catch the red dot today yet destroy the blinds. Give attitude.
+    </p>
+    <p>
+      Russian blue rub against owner because nose is wet spot something, big eyes, big eyes, crouch, shake butt, prepare
+      to pounce. Cat sit like bread furrier and even more furrier hairball for climb a tree, wait for a fireman jump to
+      fireman then scratch his face destroy couch as revenge bathe private parts with tongue then lick owner's face. Ask
+      to be pet then attack owners hand fall over dead (not really but gets sypathy) tickle my belly at your own peril i
+      will pester for food when you're in the kitchen even if it's salad Gate keepers of hell and steal the warm chair
+      right after you get up sit on the laptop. Run at 3am i like big cats and i can not lie but catasstrophe for cat
+      meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog. Cereal boxes make for five star
+      accommodation love me! cats secretly make all the worlds muffins. Leave hair everywhere sit by the fire. Hiss and
+      stare at nothing then run suddenly away try to hold own back foot to clean it but foot reflexively kicks you in
+      face, go into a rage and bite own foot, hard but mark territory. Side-eyes your "jerk" other hand while being
+      petted poop in litter box, scratch the walls, yet wake up human for food at 4am, so pose purrfectly to show my
+      beauty hiding behind the couch until lured out by a feathery toy yet hate dog, touch my tail, i shred your hand
+      purrrr. I bet my nine lives on you-oooo-ooo-hooo.
+    </p>
+  </section>
+</main>
+<aside>
+  <h2>Cheatsheet</h2>
+  <div class="cheat-items">
+    <label>Go to selecion editor</label>
+    <span class="key-combo">
+      <kbd>f</kbd>
+    </span>
+    <label>Beginning of line</label>
+    <span class="key-combo">
+      <kbd>home</kbd>
+    </span>
+    <label>End of line</label>
+    <span class="key-combo">
+      <kbd>end</kbd>
+    </span>
+    <label>Select line before cursor</label>
+    <span class="key-combo" >
+      <kbd>shift</kbd> + <kbd>home</kbd>
+    </span>
+    <label>Select line after cursor</label>
+    <span class="key-combo">
+      <kbd>shift</kbd> + <kbd>end</kbd>
+    </span>
+    <label>Select previous line</label>
+    <span class="key-combo" >
+      <kbd>shift</kbd> + <kbd>↑</kbd>
+    </span>
+    <label>Select next line</label>
+    <span class="key-combo">
+      <kbd>shift</kbd> + <kbd>↓</kbd>
+    </span>
+    <label>Select page over cursor</label>
+    <span class="key-combo" >
+      <kbd>shift</kbd> + <kbd>page up</kbd>
+    </span>
+    <label>Select page under cursor</label>
+    <span class="key-combo">
+      <kbd>shift</kbd> + <kbd>page down</kbd>
+    </span>
+  </div>
+</aside>
+</body>
+</html>
+<script>
+
+  const editor = document.querySelector("#editor")
+  function focusEditor(event) {
+    if (!editor || editor === document.activeElement) {
+      return;
+    }
+    if (event.key.toLowerCase() === "f") {
+      editor.focus();
+    }
+  }
+  document.addEventListener("keyup", focusEditor)
+
+</script>

@@ -1,0 +1,96 @@
+:root {
+  --dark: #022c43;
+  --light: whitesmoke;
+  --blue: #0c3c78;
+  --purple: #c495fd;
+  --pink: #f30a49;
+  --green: #1dddcb;
+  --yellow: #f6ff5a;
+}
+
+
+html *,
+select,
+option,
+input {
+  font-family: 'Inter', sans-serif;
+  caret-color: var(--light);
+}
+
+html {
+  background: var(--dark);
+  color: var(--light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+kbd {
+  font-family: 'Space Mono', monospace;
+  background-color: var(--blue);
+  border-radius: 3px;
+  border: 1px solid var(--purple);
+  color: var(--purple);
+  display: inline-block;
+  font-size: .85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+body {
+  padding: 0 1em;
+  min-height: 100vh;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 80px 1fr;
+  grid-template-areas:
+    "header header"
+    "main cheetsheet";
+}
+
+body > header {
+  grid-area: header;
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
+body > main {
+  grid-area: main;
+}
+body > aside {
+  grid-area: cheetsheet;
+}
+
+p {
+  margin: 0 0 1em;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+#editor {
+  padding: 1em;
+  line-height: 1.4;
+  font-weight: lighter;
+}
+
+:focus {
+  outline: var(--green) dashed 1px;
+}
+
+::selection{
+  background: var(--yellow);
+  color: var(--dark);
+}
+
+.cheat-items {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: .6em;
+}
+
+
